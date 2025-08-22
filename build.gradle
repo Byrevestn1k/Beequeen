@@ -1,0 +1,13 @@
+plugins {
+    id 'com.android.application' version '8.12.1' apply false
+    id 'org.jetbrains.kotlin.android' version '1.9.23' apply false
+}
+allprojects {
+    configurations.all {
+        resolutionStrategy {
+            // Примусово використовувати одну версію бібліотек
+            force 'com.google.ai.edge.litert:litert-api:1.0.1'
+            force 'com.google.ai.edge.litert:litert-api-runtime:1.0.1'
+        }
+    }
+}
